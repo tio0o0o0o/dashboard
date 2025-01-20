@@ -3,10 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+a {
+    color: inherit;
 }
 /* CSS RESET END */
 
 body {
+    font-family: Arial, Helvetica, sans-serif, system-ui;
     min-height: 100vh;
     display: grid;
     grid-template-areas: 
@@ -14,13 +19,51 @@ body {
         "sidebar nav nav"
         "sidebar article aside"
         "footer footer footer";
-    grid-template-columns: clamp(150px, 20vw, 300px) 1fr clamp(150px, 20vw, 300px);
+    grid-template-columns: min-content 1fr clamp(200px, 20vw, 300px);
     grid-template-rows: 50px 50px 1fr 50px;
 }
 
 .sidebar {
-    grid-area: sidebar;
     background-color: red;
+    padding: 20px;
+    grid-area: sidebar;
+    color: white;
+    font-weight: bold;
+    display: grid;
+    grid-template-rows: repeat(12, min-content);
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    align-items: center;
+    gap: 20px;
+
+    .gap {
+        height: 20px;
+    }
+
+    a:has(> .logoIcon) {
+        width: 50px;
+        height: 50px;
+    }
+
+    a > .logoIcon {
+        height: 100%;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    & a:has(> img) {
+        justify-self: center;
+        height: 30px;
+        width: 30px;
+    }
+
+    & a > img {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 header {
@@ -46,4 +89,15 @@ aside {
 footer {
     grid-area: footer;
     background-color: indigo;
+}
+
+@media (max-width:600px) {
+    .sidebar {
+        grid-template-columns: min-content;
+        column-gap: 0;
+        padding: 20px 5px;
+    }
+    a:not(:has(img)) {
+        display: none;
+    }
 }
