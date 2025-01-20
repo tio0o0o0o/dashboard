@@ -5,3 +5,45 @@
     box-sizing: border-box;
 }
 /* CSS RESET END */
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "sidebar header header"
+        "sidebar nav nav"
+        "sidebar article aside"
+        "footer footer footer";
+    grid-template-columns: clamp(150px, 20vw, 300px) 1fr clamp(150px, 20vw, 300px);
+    grid-template-rows: 50px 50px 1fr 50px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: red;
+}
+
+header {
+    grid-area: header;
+    background-color: orange;
+}
+
+nav {
+    grid-area: nav;
+    background-color: yellow;
+}
+
+article {
+    grid-area: article;
+    background-color: green;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: indigo;
+}
