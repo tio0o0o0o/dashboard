@@ -159,7 +159,7 @@ nav {
 article {
     background-color: var(--darkWhite);
     grid-area: article;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 40px 20px;
 
     & > h3 {
         margin-top: 40px;
@@ -203,7 +203,7 @@ article {
 aside {
     grid-area: aside;
     background-color: var(--darkWhite);
-    padding: 0 20px 20px 0;
+    padding: 0 20px 40px 0;
 
     & h3 {
         margin-top: 40px;
