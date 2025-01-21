@@ -44,6 +44,9 @@ body {
     grid-auto-columns: min-content;
     align-items: center;
     gap: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 
     .gap {
         height: 20px;
@@ -81,6 +84,7 @@ header {
     justify-content: space-between;
     padding: 20px 60px 0 60px;
     gap: 100px;
+    background-color: white;
 
     & img {
         width: 50px;
@@ -123,6 +127,9 @@ nav {
     padding: 20px 60px;
     box-shadow: 0 4px 4px -4px var(--shadow);
     z-index: 2;
+    background-color: white;
+    position: sticky;
+    top: 0;
 
     .myProfile {
         display: flex;
