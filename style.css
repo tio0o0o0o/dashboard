@@ -26,10 +26,9 @@ body {
     grid-template-areas: 
         "sidebar header header"
         "sidebar nav nav"
-        "sidebar article aside"
-        "footer footer footer";
+        "sidebar article aside";
     grid-template-columns: min-content 1fr clamp(200px, 20vw, 300px);
-    grid-template-rows: fit-content fit-content fit-content 50px;
+    grid-template-rows: fit-content fit-content fit-content;
 }
 
 .sidebar {
@@ -257,11 +256,6 @@ aside {
         flex-direction: column;
         justify-content: center;
     }
-}
-
-footer {
-    grid-area: footer;
-    background-color: indigo;
 }
 
 @media (max-width:1000px) {
