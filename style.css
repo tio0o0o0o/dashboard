@@ -14,6 +14,7 @@ a {
     --grey: rgb(85, 85, 85);
     --lightGrey: rgb(177, 177, 177);
     --darkWhite: rgb(228, 228, 228);
+    --blue: rgb(43, 142, 255);
 }
 
 body {
@@ -30,7 +31,7 @@ body {
 }
 
 .sidebar {
-    background-color: red;
+    background-color: var(--blue);
     padding: 20px;
     grid-area: sidebar;
     color: white;
